@@ -615,3 +615,61 @@ function problem0913(){
     }
 	return question;
 }
+function problem0914(){
+	var inputData = [{
+		'dist1':260,
+		'time1': 21,
+		'dist2':600
+		},
+		{
+		'dist1':220,
+		'time1': 25,
+		'dist2':750
+		},
+		{
+		'dist1':300,
+		'time1': 20,
+		'dist2':700
+		},
+		{
+		'dist1':180,
+		'time1': 14,
+		'dist2':560
+		},
+		{
+		'dist1':200,
+		'time1': 25,
+		'dist2':800
+		}
+	],
+		randomIndex = getRandomNumber(inputData.length),
+	    dist1 = inputData[randomIndex]['dist1'],
+		time1 = inputData[randomIndex]['time1'],
+    	dist2 = inputData[randomIndex]['dist2'],
+	    speed,
+	    time,
+		question = {};
+		
+	    dist1=parseInt(dist1);
+		time1=parseInt(time1);
+		dist2=parseInt(dist2);
+		speed=distance1/time1;
+	    time=((dist1+dist2)/speed);
+
+
+	question = {
+		'type': 'single',
+		'id': '0914',
+		'question': 'A train ' + dist1 + ' m long passes a pole in' + time1 + 'seconds. How long will take to pass a plateform '+dist2+'m long?',
+		'options': {
+			'A': time * parseInt(Math.random()*10),
+			'B': time - parseInt(Math.random()*10),
+			'C': time + parseInt(Math.random()*10),
+			'D': time 
+		'answer': 'D',
+		'author-id': '09'
+	}
+	
+	return question;
+	
+}
