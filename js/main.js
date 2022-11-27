@@ -12,4 +12,5 @@ questionBank.push(problem098());
 questionBank.push(problem099());
 questionBank.push(problem0910());
 questionBank.push(problem0911());
+questionBank.push(problem0912());
 console.log(questionBank);
