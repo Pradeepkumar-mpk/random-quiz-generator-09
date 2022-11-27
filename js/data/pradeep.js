@@ -187,3 +187,49 @@ function problem094(){
     }
 	return question;
 }
+function problem095(){
+	var inputData = [{
+		'sp': 25,
+		'pp': 2/5
+		},
+		{
+		'sp': 30,
+		'pp': 2/5
+		},
+		{
+		'sp': 40,
+		'pp': 2/5
+		},
+		{
+		'sp': 45,
+		'pp': 2/5
+		},
+		{
+		'sp': 50,
+		'pp': 2/5
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    sp= inputData[randomIndex]['sp'],
+		pp = inputData[randomIndex]['pp'],
+		cp,
+		question = {};
+
+	sp = parseInt(sp);
+    pp = parseFloat(pp;
+    cp = 100/(100+pp)*sp;
+
+	question = {
+		'type': 'single',
+		'id': '095',
+		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.'
+		'options': {
+			'A': cp - parseInt(Math.random()*10),
+			'B': cp,
+			'C': cp + parseInt(Math.random()*10),
+			'D': cp - parseInt(Math.random()*10)
+		},
+		'answer': 'B',
+		'author-id': '09'
+    }
+	return question;
+}
