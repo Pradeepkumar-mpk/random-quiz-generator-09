@@ -281,29 +281,29 @@ function problem096(){
 }
 function problem097(){
 	var inputData = [{
-		'p': 8,
-		'n': 4,
-		'r':
+		'p': 12600,
+		'n': 2,
+		'r':10
 		},
 		{
-		'p': 8,
-		'n': 4,
-		'r':		
+		'p': 12400,
+		'n': 2,
+		'r':4		
 		},
 		{
-		'p': 8,
-		'n': 4,
-		'r':
+		'p': 12600,
+		'n': 2,
+		'r':8
 		},
 		{
-		'p': 8,
-		'n': 4,
-		'r':
+		'p': 12600,
+		'n': 2,
+		'r':12
 		},
 		{
-		'p': 8,
-		'n': 4,
-		'r':
+		'p': 12400,
+		'n': 2,
+		'r':8
 		}],
 		randomIndex = getRandomNumber(inputData.length),
 	    p = inputData[randomIndex]['p'],
@@ -326,8 +326,61 @@ function problem097(){
 		'options': {
 			'A': ci - parseInt(Math.random()*10),
 			'B': ci + parseInt(Math.random()*10),
-			'C': ci - parseInt(Math.random()*10)
+			'C': ci - parseInt(Math.random()*10),
 			'D': ci 
+		},
+		'answer': 'D',
+		'author-id': '09'
+    }
+	return question;
+}
+function problem098(){
+	var inputData = [{
+		'p': 45000,
+		'n': 6,
+		'r':4
+		},
+		{
+		'p': 45000,
+		'n': 2,
+		'r':6		
+		},
+		{
+		'p': 40000,
+		'n': 6,
+		'r':6
+		},
+		{
+		'p': 46000,
+		'n': 6,
+		'r':4
+		},
+		{
+		'p': 44000,
+		'n': 2,
+		'r':6
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    p = inputData[randomIndex]['p'],
+		n = inputData[randomIndex]['n'],
+		r = inputData[randomIndex]['r'],
+		si,
+		question = {};
+
+	p = parseInt(p);
+    n = parseInt(n);
+    r = parseInt(r);
+    si=p*n*r/100;
+	
+	question = {
+		'type': 'single',
+		'id': '098',
+		'question': 'Find the simple interest when ' + p + ' rs rate of interest ' + r + ' percentage per annum, time ' + n + ' years.',
+		'options': {
+			'A': si - parseInt(Math.random()*10),
+			'B': si + parseInt(Math.random()*10),
+			'C': si - parseInt(Math.random()*10),
+			'D': si 
 		},
 		'answer': 'D',
 		'author-id': '09'

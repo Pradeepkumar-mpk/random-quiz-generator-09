@@ -8,4 +8,5 @@ questionBank.push(problem094());
 questionBank.push(problem095());
 questionBank.push(problem096());
 questionBank.push(problem097());
+questionBank.push(problem098());
 console.log(questionBank);
