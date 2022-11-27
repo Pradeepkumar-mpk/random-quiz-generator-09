@@ -673,3 +673,59 @@ function problem0914(){
 	return question;
 	
 }
+function problem0915(){
+	var inputData = [{
+		'initial': 46000,
+		'ending': 59000,
+		'years': 4
+		},
+		{
+		'initial': 174000,
+		'ending': 365000,
+			'years': 8
+		},
+		{
+		'initial': 45600,
+		'ending': 69000,
+			'years': 3
+		},
+		{
+		'initial': 23800,
+		'ending': 66000,
+		'years': 5
+		},
+		{
+		'initial': 11000,
+		'ending': 40000,
+			'years': 4
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		initial= inputData[randomIndex]['initial'],
+		ending = inputData[randomIndex]['ending'],
+		years = inputData[randomIndex]['years'],
+		average,
+		question = {};
+	
+	initial=parseInt(initial);
+	ending=parseInt(ending);
+	years=parseInt(years);
+	increased=ending-initial;
+	increasedPercentage=(increased/initial)*100;
+	average=(increasedPercentage/years);
+
+	question = {
+		'type': 'single',
+		'id': '0915',
+		'question': ' The population of a town increased from '+ initial +' to '+ ending+' in a '+ years +'. The average percent increase of population per year is:',
+		'options': {
+			'A': average,
+			'B': average - parseInt(Math.random()*10),
+			'C': average + parseInt(Math.random()*10),
+			'D': average - parseInt(Math.random()*10)
+		},
+		'answer': 'A',
+		'author-id': '09'
+	}
+	
+	return question;
+}
