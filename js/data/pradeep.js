@@ -548,7 +548,7 @@ function problem0912(){
 		question = {};
 
 	cp = parseInt(cp);
-    sp = parsefloat(lp);
+    sp = parseInt(sp);
 	p = sp - cp ;
     pp = p/cp*100;
 
@@ -556,6 +556,54 @@ function problem0912(){
 		'type': 'single',
 		'id': '0912',
 		'question': 'An article is bought for  ' + cp + 'rs and sold for ' + sp + ' rs. what is the '+ pp +' profit percentage of the article?',
+		'options': {
+			'A': pp - parseFloat(Math.random()*10),
+			'B': pp * parseFloat(Math.random()*10),
+			'C': pp + parseFloat(Math.random()*10),
+			'D': pp 
+		},
+		'answer': 'D',
+		'author-id': '09'
+    }
+	return question;
+}
+function problem0913(){
+	var inputData = [{
+		'cp': 31.25,
+		'sp': 33
+		},
+		{
+		'cp': 31.25,
+		'sp': 35
+		},
+		{
+		'cp': 35.5,
+		'sp': 40
+		},
+		{
+		'cp': 34.5,
+		'sp': 38
+		},
+		{
+		'cp': 28.25,
+		'sp': 30
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    cp = inputData[randomIndex]['cp'],
+		sp = inputData[randomIndex]['sp'],
+		p,
+		pp,
+		question = {};
+
+	cp = parseFloat(cp);
+    sp = parseInt(sp);
+	p = sp - cp ;
+    pp = p/cp*100;
+
+	question = {
+		'type': 'single',
+		'id': '0913',
+		'question': 'A pen is bought for  ' + cp + 'rs and sold for ' + sp + ' rs. what is the '+ pp +' profit percentage of the pen?',
 		'options': {
 			'A': pp - parseFloat(Math.random()*10),
 			'B': pp * parseFloat(Math.random()*10),
