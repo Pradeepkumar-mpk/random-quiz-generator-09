@@ -11,7 +11,7 @@ function problem091(){
 		'time': 50
 		},
 		{
-		'distance': 10,
+		'distance': 55,
 		'time': 70
 		},
 		{
@@ -39,7 +39,7 @@ function problem091(){
 	question = {
 		'type': 'single',
 		'id': '091',
-		'question': 'A car travells a distamce ' + distance + 'km from north direction at ' + time + ' sec. Calculate the speed of the train.';
+		'question': 'A car travells a distance ' + distance + 'km at ' + time + ' sec. Calculate the speed of the train.',
 		'options': {
 			'A': speed,
 			'B': speed - parseInt(Math.random()*10),
@@ -47,15 +47,52 @@ function problem091(){
 			'D': speed - parseInt(Math.random()*10)
 		},
 		'answer': 'A',
-		'author-id': '091'
+		'author-id': '09'
 	}
 	
 	return question;
 	
 }
 
-function problem2(){
+function problem092(){
+	var inputData = [{
+		'number': 5,
+		},
+		{
+		'number': 6,
+		},
+		{
+		'number': 9,
+		},
+		{
+		'number': 3,		
+		},
+		{
+		'number': 10,
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		number= inputData[randomIndex]['number'],
+		average,
+		question = {};
+
+	number = parseInt(number);
+    average = (number-1)/2;
+
+	question = {
+		'type': 'single',
+		'id': '092',
+		'question': 'find the average of first 10 ' + number + 'whole numbers.',
+		'options': {
+			'A': average + parseInt(Math.random()*10),
+			'B': average - parseInt(Math.random()*10),
+			'C': average,
+			'D': average- parseInt(Math.random()*10)
+		},
+		'answer': 'C',
+		'author-id': '09'
+	}
 	
+	return question;
 }
 
 function problem3(){
