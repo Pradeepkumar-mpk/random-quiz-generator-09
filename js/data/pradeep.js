@@ -97,24 +97,24 @@ function problem092(){
 
 function problem093(){
 	var inputData = [{
-		'cp': 35,
-		'lp': 50
+		'cp': 8000,
+		'lp': 10
 		},
 		{
-		'cp': 55,
-		'lp': 70
+		'cp': 7500,
+		'lp': 12
 		},
 		{
-		'cp': 12,
-		'lp': 26
+		'cp': 7000,
+		'lp': 10
 		},
 		{
-		'cp': 23,
-		'lp': 56
+		'cp': 6500,
+		'lp': 10
 		},
 		{
-		'cp': 15,
-		'lp': 45
+		'cp': 6000,
+		'lp': 10
 		}],
 		randomIndex = getRandomNumber(inputData.length),
 	    cp = inputData[randomIndex]['cp'],
@@ -128,7 +128,7 @@ function problem093(){
 
 	question = {
 		'type': 'single',
-		'id': '092',
+		'id': '093',
 		'question': 'A man purchases TV for ' + cp + 'rs ans sells it at ' + lp + ' loss percentage. what is the sp of the TV?',
 		'options': {
 			'A': sp - parseFloat(Math.random()*10),
@@ -189,27 +189,27 @@ function problem094(){
 }
 function problem095(){
 	var inputData = [{
-		'sp': 25,
-		'pp': 2/5
+		'sp': 8400,
+		'pp': 12
 		},
 		{
-		'sp': 30,
-		'pp': 2/5
+		'sp': 7000,
+		'pp': 12
 		},
 		{
-		'sp': 40,
-		'pp': 2/5
+		'sp': 6500,
+		'pp': 12
 		},
 		{
-		'sp': 45,
-		'pp': 2/5
+		'sp': 6000,
+		'pp': 15
 		},
 		{
-		'sp': 50,
-		'pp': 2/5
+		'sp': 8200,
+		'pp':12
 		}],
 		randomIndex = getRandomNumber(inputData.length),
-	    sp= inputData[randomIndex]['sp'],
+	    sp = inputData[randomIndex]['sp'],
 		pp = inputData[randomIndex]['pp'],
 		cp,
 		question = {};
@@ -229,6 +229,52 @@ function problem095(){
 			'D': cp - parseInt(Math.random()*10)
 		},
 		'answer': 'B',
+		'author-id': '09'
+    }
+	return question;
+}
+unction problem096(){
+	var inputData = [{
+		'us': 8,
+		'ds': 4
+		},
+		{
+		'us': 10,
+		'ds': 4
+		},
+		{
+		'us': 12,
+		'ds': 6
+		},
+		{
+		'us': 16,
+		'ds': 4
+		},
+		{
+		'us': 14,
+		'ds': 12
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    us = inputData[randomIndex]['us'],
+		ds = inputData[randomIndex]['ds'],
+		ss,
+		question = {};
+
+	us = parseInt(us);
+    ds = parseInt(ds;
+    ss = (us+ds)/2;
+
+	question = {
+		'type': 'single',
+		'id': '096',
+		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.'
+		'options': {
+			'A': ss - parseInt(Math.random()*10),
+			'B': ss + parseInt(Math.random()*10),
+			'C': ss,
+			'D': ss - parseInt(Math.random()*10)
+		},
+		'answer': 'C',
 		'author-id': '09'
     }
 	return question;
