@@ -421,7 +421,7 @@ function problem099(){
 	question = {
 		'type': 'single',
 		'id': '099',
-		'question': 'If the length ' + l + ' m and its breadth ' + b +' m. find the area'+ a + ' m? ',
+		'question': 'If the length of rectangle is ' + l + ' m and its breadth is ' + b +' m. find the area'+ a + ' m? ',
 		'options': {
 			'A': a * parseInt(Math.random()*10),
 			'B': a 
@@ -460,7 +460,7 @@ function problem0910(){
 	question = {
 		'type': 'single',
 		'id': '0910',
-		'question': 'If one side of square is ' + a + ' m. find the area'+ a + ' m?' 
+		'question': 'If one side of square is ' + a + ' m. find the '+ area + ' m?' 
 		'options': {
 			'A': area + parseInt(Math.random()*10),
 			'B': area - parseInt(Math.random()*10),
@@ -471,5 +471,51 @@ function problem0910(){
 		'author-id': '09'
 	}
 	
+	return question;
+}
+function problem0911(){
+	var inputData = [{
+		'h':8,
+		'b':4
+		},
+		{
+		'h':6,
+		'b':3
+		},
+		{
+		'h': 12,
+		'b': 6
+		},
+		{
+		'h': 4,
+		'b': 3
+		},
+		{
+		'h': 4,
+		'b': 2
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    h = inputData[randomIndex]['h'],
+	    b = inputData[randomIndex]['b'],
+		a,
+		question = {};
+
+	h = parseInt(h);
+    b = parseInt(b);
+    a = b*h/2;
+	
+	question = {
+		'type': 'single',
+		'id': '0911',
+		'question': 'If the height of triangle is ' + l + ' m and its breadth ' + b +' m. find the area'+ a + ' m? ',
+		'options': {
+			'A': a * parseInt(Math.random()*10),
+			'B': a 
+			'C': a - parseInt(Math.random()*10),
+			'D': a + parseInt(Math.random()*10)
+		},
+		'answer': 'B',
+		'author-id': '09'
+    }
 	return question;
 }
