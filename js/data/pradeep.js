@@ -802,11 +802,11 @@ function problem0917(){
 		time = inputData[randomIndex]['time'],
 		speed,
 		question = {};
-
+		
 	dist = parseInt(dist*18/5);
 	time = parseInt(time*60);
 	speed = dist/time;
-
+	
 	question = {
 		'type': 'single'
 		'id': '0917',
@@ -821,5 +821,64 @@ function problem0917(){
 		'author-id': '09',
 	}
 	return question;
+}
+function problem0918(){
+	var inputData = [{
+		'ss':15,
+		'cs': 3,
+		'time':12
+		},
+		{
+		'ss':15,
+		'cs': 4,
+		'time':12
+		},
+		{
+		'ss':15,
+		'cs': 5,
+		'time':12
+		},
+		{
+		'ss':15,
+		'cs': 6,
+		'time':12
+		},
+		{
+		'ss':15,
+		'cs': 7,
+		'time':12
+		}
+	],
+		randomIndex = getRandomNumber(inputData.length),
+	    ss = inputData[randomIndex]['ss'],
+		cs = inputData[randomIndex]['cs'],
+    	time = inputData[randomIndex]['time'],
+	    speed,
+	    distance,
+		question = {};
+		
+	    ss = parseInt(ss);
+		cs = parseInt(cs);
+		time = parseInt(time/60);
+		speed = ss+cs;
+	    distance = speed*time;
+
+
+	question = {
+		'type': 'single',
+		'id': '0918',
+		'question': ' The speed of a boat in stil water in' + ss + 'km/hr and the rate of current is '+ cs + 'km/hr. The distance travlled downstream in ' + time + 'minutes is?',
+		'options': {
+			'A': distance-parseInt(Math.random()*10),
+			'B': distance+parseInt(Math.random()*10),
+			'C': distance-parseInt(Math.random()*10),
+			'D': distance
+		},
+		'answer': 'D',
+		'author-id': '09'
+	}
+	
+	return question;
+	
 }
 
