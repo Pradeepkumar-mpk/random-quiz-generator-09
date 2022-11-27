@@ -131,12 +131,58 @@ function problem093(){
 		'id': '092',
 		'question': 'A man purchases TV for ' + cp + 'rs ans sells it at ' + lp + ' loss percentage. what is the sp of the TV?',
 		'options': {
-			'A': sp - parseInt(Math.random()*10),
-			'B': sp - parseInt(Math.random()*10),
-			'C': sp + parseInt(Math.random()*10),
+			'A': sp - parseFloat(Math.random()*10),
+			'B': sp - parseFloat(Math.random()*10),
+			'C': sp + parseFloat(Math.random()*10),
 			'D': sp 
 		},
 		'answer': 'D',
+		'author-id': '09'
+    }
+	return question;
+}
+function problem094(){
+	var inputData = [{
+		'tankCap': 25,
+		'buckCap': 2/5
+		},
+		{
+		'tankCap': 30,
+			'buckCap': 2/5
+		},
+		{
+		'tankCap': 40,
+			'buckCap': 2/5
+		},
+		{
+		'tankCap': 45,
+			'buckCap': 2/5
+		},
+		{
+		'tankCap': 50,
+			'buckCap': 2/5
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    tankCap= inputData[randomIndex]['tankCap'],
+		buckCap = inputData[randomIndex]['buckCap'],
+		nBuck,
+		question = {};
+
+	tankCap = parseInt(tankCap);
+    buckCap = parseFloat(buckCap;
+    nBuck = tankCap/buckCap;
+
+	question = {
+		'type': 'single',
+		'id': '094',
+		'question': 'To fill a tank ' + tankCap + 'buckets of water is required. How many buckets of water will be required to fill the same tank if the capacity of the bucket is reduced to ' + buckCap + ' two fifth of its present?',
+		'options': {
+			'A': nBuck - parseFloat(Math.random()*10),
+			'B': nBuck ,
+			'C': nBuck + parseFloat(Math.random()*10),
+			'D': nBuck - parseFloat(Math.random()*10)
+		},
+		'answer': 'B',
 		'author-id': '09'
     }
 	return question;
