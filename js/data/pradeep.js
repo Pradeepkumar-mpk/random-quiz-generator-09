@@ -24,7 +24,7 @@ function problem091(){
 		},
 		{
 		'distance': 15,
-			'time': 45
+		'time': 45
 		}],
 		randomIndex = getRandomNumber(inputData.length),
 		distance= inputData[randomIndex]['distance'],
@@ -728,4 +728,52 @@ function problem0915(){
 	}
 	
 	return question;
+}
+function problem0916(){
+	var inputData = [{
+		'speed':20,
+		'time': 2
+		},
+		{
+		'speed':22,
+		'time':2
+		},
+		{
+		'speed':24,
+		'time':2
+		},
+		{
+		'speed':25,
+		'time': 2
+		},
+		{
+		'speed':26,
+		'time': 2
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		speed = inputData[randomIndex]['speed'],
+		time = inputData[randomIndex]['time'],
+    	distance,
+		question = {};
+		
+	    speed = parseInt(speed*5/18);
+		time = parseInt(time*60);
+		distance = speed*time;
+		
+	question = {
+		'type': 'single',
+		'id': '0916',
+		'question': 'A rider moving at a speed of' + speed + ' m/s and crosses a street in  '+ time +' mins .what is the ' + distance + 'distance of the street?',
+		'options': {
+			'A':  distance-parseInt(Math.random()*10),
+			'B':  distance,
+			'C':  distance+parseInt(Math.random()*10),
+			'D':  distance-parseInt(Math.random()*10)
+		},
+		'answer': 'B',
+		'author-id': '09'
+	}
+	
+	return question;
+	
 }
