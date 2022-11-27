@@ -44,7 +44,7 @@ function problem091(){
 			'A': speed,
 			'B': speed - parseInt(Math.random()*10),
 			'C': speed + parseInt(Math.random()*10),
-			'D': speed - parseInt(Math.random()*10)
+			'D': speed * parseInt(Math.random()*10)
 		},
 		'answer': 'A',
 		'author-id': '09'
@@ -86,7 +86,7 @@ function problem092(){
 			'A': average + parseInt(Math.random()*10),
 			'B': average - parseInt(Math.random()*10),
 			'C': average,
-			'D': average- parseInt(Math.random()*10)
+			'D': average * parseInt(Math.random()*10)
 		},
 		'answer': 'C',
 		'author-id': '09'
@@ -132,7 +132,7 @@ function problem093(){
 		'question': 'A man purchases TV for ' + cp + 'rs ans sells it at ' + lp + ' loss percentage. what is the sp of the TV?',
 		'options': {
 			'A': sp - parseFloat(Math.random()*10),
-			'B': sp - parseFloat(Math.random()*10),
+			'B': sp * parseFloat(Math.random()*10),
 			'C': sp + parseFloat(Math.random()*10),
 			'D': sp 
 		},
@@ -177,7 +177,7 @@ function problem094(){
 		'id': '094',
 		'question': 'To fill a tank ' + tankCap + 'buckets of water is required. How many buckets of water will be required to fill the same tank if the capacity of the bucket is reduced to ' + buckCap + ' two fifth of its present?',
 		'options': {
-			'A': nBuck - parseFloat(Math.random()*10),
+			'A': nBuck * parseFloat(Math.random()*10),
 			'B': nBuck ,
 			'C': nBuck + parseFloat(Math.random()*10),
 			'D': nBuck - parseFloat(Math.random()*10)
@@ -223,7 +223,7 @@ function problem095(){
 		'id': '095',
 		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.',
 		'options': {
-			'A': cp - parseInt(Math.random()*10),
+			'A': cp * parseInt(Math.random()*10),
 			'B': cp,
 			'C': cp + parseInt(Math.random()*10),
 			'D': cp - parseInt(Math.random()*10)
@@ -272,7 +272,7 @@ function problem096(){
 			'A': ss - parseInt(Math.random()*10),
 			'B': ss + parseInt(Math.random()*10),
 			'C': ss,
-			'D': ss - parseInt(Math.random()*10)
+			'D': ss * parseInt(Math.random()*10)
 		},
 		'answer': 'C',
 		'author-id': '09'
@@ -324,7 +324,7 @@ function problem097(){
 		'id': '097',
 		'question': 'Find the compound interest on' + p + ' rs for ' + n + ' years at ' + r + ' percentage per annum completed annualy.',
 		'options': {
-			'A': ci - parseInt(Math.random()*10),
+			'A': ci * parseInt(Math.random()*10),
 			'B': ci + parseInt(Math.random()*10),
 			'C': ci - parseInt(Math.random()*10),
 			'D': ci 
@@ -379,10 +379,56 @@ function problem098(){
 		'options': {
 			'A': si - parseInt(Math.random()*10),
 			'B': si + parseInt(Math.random()*10),
-			'C': si - parseInt(Math.random()*10),
+			'C': si * parseInt(Math.random()*10),
 			'D': si 
 		},
 		'answer': 'D',
+		'author-id': '09'
+    }
+	return question;
+}
+function problem099(){
+	var inputData = [{
+		'l':8,
+		'b':4
+		},
+		{
+		'l':6,
+		'b':3
+		},
+		{
+		'l': 12,
+		'b': 6
+		},
+		{
+		'l': 4,
+		'b': 3
+		},
+		{
+		'l': 4,
+		'b': 2
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    l = inputData[randomIndex]['p'],
+	    b = inputData[randomIndex]['n'],
+		a,
+		question = {};
+
+	l = parseInt(l);
+    b = parseInt(b);
+    a = l*b;
+	
+	question = {
+		'type': 'single',
+		'id': '099',
+		'question': 'If the length ' + l + ' m and its breadth ' + b +' m. find the area'+ a + ' m? '
+		'options': {
+			'A': a * parseInt(Math.random()*10),
+			'B': a 
+			'C': a - parseInt(Math.random()*10),
+			'D': a + parseInt(Math.random()*10)
+		},
+		'answer': 'B',
 		'author-id': '09'
     }
 	return question;
