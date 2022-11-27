@@ -932,4 +932,53 @@ function problem0919(){
 	return question;
 	
 }
+function problem0920(){
+	var inputData = [{
+		'sp': 2000,
+		'cp': 1000
+		},
+		{
+		'sp': 3500,
+		'cp': 350
+		},
+		{
+		'sp': 900,
+		'cp': 400
+		},
+		{
+		'sp': 800,
+		'cp': 300
+		},
+		{
+		'sp': 5000,
+		'cp': 1000
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		sp = inputData[randomIndex]['sp'],
+		cp = inputData[randomIndex]['cp'],
+		profit,
+		profitPercentage,
+		question = {};
 
+	sp = parseInt(sp);
+	cp = parseInt(cp);
+	profit = sp - cp;
+	pp = (profit/cp)*100;
+
+	question = {
+		'type': 'single',
+		'id': '0920',
+		'question': 'A shopkeeper sold an article for rs. ' + sp + '. If costPrice of article is ' + cp + '. Find the ' + pp + 'profit percentage?', 
+		'options': {
+			'A': pp,
+			'B': pp * parseInt(Math.random()*10),
+			'C': pp + parseInt(Math.random()*10),
+			'D': pp - parseInt(Math.random()*10)
+		},
+		'answer': 'A',
+		'author-id': '09',
+	}
+	
+	return question;
+	
+}
