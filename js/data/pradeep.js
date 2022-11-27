@@ -95,6 +95,49 @@ function problem092(){
 	return question;
 }
 
-function problem3(){
-	
+function problem093(){
+	var inputData = [{
+		'cp': 35,
+		'lp': 50
+		},
+		{
+		'cp': 55,
+		'lp': 70
+		},
+		{
+		'cp': 12,
+		'lp': 26
+		},
+		{
+		'cp': 23,
+		'lp': 56
+		},
+		{
+		'cp': 15,
+		'lp': 45
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    cp = inputData[randomIndex]['cp'],
+		lp = inputData[randomIndex]['lp'],
+		sp,
+		question = {};
+
+	cp = parseInt(cp);
+    lp = parsefloat(lp);
+	sp = (lp * cp)/100 - cp ;
+
+	question = {
+		'type': 'single',
+		'id': '092',
+		'question': 'A man purchases TV for ' + cp + 'rs ans sells it at ' + lp + ' loss percentage. what is the sp of the TV?',
+		'options': {
+			'A': sp - parseInt(Math.random()*10),
+			'B': sp - parseInt(Math.random()*10),
+			'C': sp + parseInt(Math.random()*10),
+			'D': sp 
+		},
+		'answer': 'D',
+		'author-id': '09'
+    }
+	return question;
 }
