@@ -731,24 +731,24 @@ function problem0915(){
 }
 function problem0916(){
 	var inputData = [{
-		'speed':20,
-		'time': 2
+		'speed':40,
+		'time': 20
 		},
 		{
 		'speed':22,
 		'time':2
 		},
 		{
-		'speed':24,
+		'speed':14,
 		'time':2
 		},
 		{
-		'speed':25,
+		'speed':15,
 		'time': 2
 		},
 		{
-		'speed':26,
-		'time': 2
+		'speed':18,
+		'time': 4
 		}],
 		randomIndex = getRandomNumber(inputData.length),
 		speed = inputData[randomIndex]['speed'],
@@ -775,5 +775,51 @@ function problem0916(){
 	}
 	
 	return question;
-	
 }
+function problem0917(){
+	var inputData = [{
+		'dist': 60,
+		'time': 5
+		},
+		{
+		'dist': 80,
+		'time': 4
+		},
+		{
+		'dist': 60,
+		'time': 3
+		},
+		{
+		'dist': 100,
+		'time': 25
+		},
+		{
+		'dist': 120,
+		'time': 20
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+		dist = inputData[randomIndex]['dist'],
+		time = inputData[randomIndex]['time'],
+		speed,
+		question = {};
+
+	dist = parseInt(dist*18/5);
+	time = parseInt(time*60);
+	speed = dist/time;
+
+	question = {
+		'type': 'single'
+		'id': '0917',
+		'question': 'A person crosses a '+ distance+' m long street in '+ time+' minutes. What is speed in km per hour?', 
+		'options': {
+			'A': speed * parseInt(Math.random()*10),
+			'B': speed,
+			'C': speed + parseInt(Math.random()*10),
+			'D': speed - parseInt(Math.random()*10)
+		},
+		'answer': 'B',
+		'author-id': '09',
+	}
+	return question;
+}
+
