@@ -221,7 +221,7 @@ function problem095(){
 	question = {
 		'type': 'single',
 		'id': '095',
-		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.'
+		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.',
 		'options': {
 			'A': cp - parseInt(Math.random()*10),
 			'B': cp,
@@ -233,7 +233,7 @@ function problem095(){
     }
 	return question;
 }
-unction problem096(){
+function problem096(){
 	var inputData = [{
 		'us': 8,
 		'ds': 4
@@ -267,7 +267,7 @@ unction problem096(){
 	question = {
 		'type': 'single',
 		'id': '096',
-		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.'
+		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.',
 		'options': {
 			'A': ss - parseInt(Math.random()*10),
 			'B': ss + parseInt(Math.random()*10),
@@ -275,6 +275,61 @@ unction problem096(){
 			'D': ss - parseInt(Math.random()*10)
 		},
 		'answer': 'C',
+		'author-id': '09'
+    }
+	return question;
+}
+function problem097(){
+	var inputData = [{
+		'p': 8,
+		'n': 4,
+		'r':
+		},
+		{
+		'p': 8,
+		'n': 4,
+		'r':		
+		},
+		{
+		'p': 8,
+		'n': 4,
+		'r':
+		},
+		{
+		'p': 8,
+		'n': 4,
+		'r':
+		},
+		{
+		'p': 8,
+		'n': 4,
+		'r':
+		}],
+		randomIndex = getRandomNumber(inputData.length),
+	    p = inputData[randomIndex]['p'],
+		n = inputData[randomIndex]['n'],
+		r = inputData[randomIndex]['r'],
+		a,
+		ci,
+		question = {};
+
+	p = parseInt(p);
+    n = parseInt(n);
+    r = parseInt(r);
+	a = p*(1+(r/100))**n;
+	ci = a - p,
+
+	question = {
+		'type': 'single',
+		'id': '097',
+		'question': 'Find the compound interest on' + p + ' rs for ' + n + ' years at ' + r + ' percentage per annum completed annualy.',
+		'options': {
+			'A': ci - parseInt(Math.random()*10),
+			'B': ci + parseInt(Math.random()*10),
+			'C': ci - parseInt(Math.random()*10)
+			'D': ci 
+		},
+		'answer': 'D',
 		'author-id': '09'
     }
 	return question;
