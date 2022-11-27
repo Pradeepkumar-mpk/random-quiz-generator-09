@@ -826,27 +826,27 @@ function problem0918(){
 	var inputData = [{
 		'ss':15,
 		'cs': 3,
-		'time':12
+		'time':10
 		},
 		{
-		'ss':15,
+		'ss':20,
 		'cs': 4,
 		'time':12
 		},
 		{
 		'ss':15,
-		'cs': 5,
-		'time':12
-		},
-		{
-		'ss':15,
 		'cs': 6,
-		'time':12
+		'time':10
 		},
 		{
 		'ss':15,
+		'cs': 4,
+		'time':6
+		},
+		{
+		'ss':16,
 		'cs': 7,
-		'time':12
+		'time':14
 		}
 	],
 		randomIndex = getRandomNumber(inputData.length),
@@ -875,6 +875,57 @@ function problem0918(){
 			'D': distance
 		},
 		'answer': 'D',
+		'author-id': '09'
+	}
+	
+	return question;
+	
+}
+function problem0919(){
+	var inputData = [{
+		'speed':20,
+		'time': 4
+		},
+		{
+		'speed':22,
+		'time':6
+		},
+		{
+		'speed':44,
+		'time':2
+		},
+		{
+		'speed':25,
+		'time': 6
+		},
+		{
+		'speed':30,
+		'time': 5
+		}
+	],
+		randomIndex = getRandomNumber(inputData.length),
+		speed= inputData[randomIndex]['speed'],
+		time= inputData[randomIndex]['time'],
+    	distance,
+		question = {};
+		
+	    speed = parseInt(speed*5/18);
+		time = parseInt(time*60);
+		distance = speed*time;
+		
+
+
+	question = {
+		'type': 'single',
+		'id': '0919',
+		'question': 'A cyclist moving at a speed of' + speed + 'a crosses bridge in '+ time +'minitues.what is the length' + distance +' of the bridge?',
+		'options': {
+			'A':  distance-parseInt(Math.random()*10),
+			'B':  distance,
+			'C':  distance+parseInt(Math.random()*10),
+			'D':  distance-parseInt(Math.random()*10)
+		},
+		'answer': 'B',
 		'author-id': '09'
 	}
 	
