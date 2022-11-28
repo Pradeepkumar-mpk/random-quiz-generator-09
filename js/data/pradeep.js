@@ -16,11 +16,11 @@ function problem091(){
 		},
 		{
 		'distance': 12,
-			'time': 26
+		'time': 26
 		},
 		{
 		'distance': 23,
-			'time': 56
+		'time': 56
 		},
 		{
 		'distance': 15,
@@ -123,7 +123,7 @@ function problem093(){
 		question = {};
 
 	cp = parseInt(cp);
-    lp = parsefloat(lp);
+    lp = parseFloat(lp);
 	sp = (lp * cp)/100 - cp ;
 
 	question = {
@@ -169,7 +169,7 @@ function problem094(){
 		question = {};
 
 	tankCap = parseInt(tankCap);
-    buckCap = parseFloat(buckCap;
+    buckCap = parseFloat(buckCap);
     nBuck = tankCap/buckCap;
 
 	question = {
@@ -215,7 +215,7 @@ function problem095(){
 		question = {};
 
 	sp = parseInt(sp);
-    pp = parseFloat(pp;
+    pp = parseFloat(pp);
     cp = 100/(100+pp)*sp;
 
 	question = {
@@ -261,13 +261,13 @@ function problem096(){
 		question = {};
 
 	us = parseInt(us);
-    ds = parseInt(ds;
+    ds = parseInt(ds);
     ss = (us+ds)/2;
 
 	question = {
 		'type': 'single',
 		'id': '096',
-		'question': 'suresh bought a cell phone from a shop. If he sells it at ' + sp + ' rs to mahesh and earns a profit ' + pp + ' percentage . Find the price at which suresh bought the cell phone.',
+		'question': 'In one hour a boat goes  ' + us + ' km/hr along stream and ' + ds + ' km/hr against the stream . The speed of boat in ' + ss +' in km/hr is.',
 		'options': {
 			'A': ss - parseInt(Math.random()*10),
 			'B': ss + parseInt(Math.random()*10),
@@ -424,7 +424,7 @@ function problem099(){
 		'question': 'If the length of rectangle is ' + l + ' m and its breadth is ' + b +' m. find the area'+ a + ' m? ',
 		'options': {
 			'A': a * parseInt(Math.random()*10),
-			'B': a 
+			'B': a ,
 			'C': a - parseInt(Math.random()*10),
 			'D': a + parseInt(Math.random()*10)
 		},
@@ -460,7 +460,7 @@ function problem0910(){
 	question = {
 		'type': 'single',
 		'id': '0910',
-		'question': 'If one side of square is ' + a + ' m. find the '+ area + ' m?' 
+		'question': 'If one side of square is ' + a + ' m. find the '+ area + ' m?',
 		'options': {
 			'A': area + parseInt(Math.random()*10),
 			'B': area - parseInt(Math.random()*10),
@@ -507,10 +507,10 @@ function problem0911(){
 	question = {
 		'type': 'single',
 		'id': '0911',
-		'question': 'If the height of triangle is ' + l + ' m and its breadth ' + b +' m. find the area'+ a + ' m? ',
+		'question': 'If the height of triangle is ' + h + ' m and its breadth ' + b +' m. find the area'+ a + ' m? ',
 		'options': {
 			'A': a * parseInt(Math.random()*10),
-			'B': a 
+			'B': a, 
 			'C': a - parseInt(Math.random()*10),
 			'D': a + parseInt(Math.random()*10)
 		},
@@ -653,25 +653,24 @@ function problem0914(){
 	    dist1=parseInt(dist1);
 		time1=parseInt(time1);
 		dist2=parseInt(dist2);
-		speed=distance1/time1;
+		speed=dist1/time1;
 	    time=((dist1+dist2)/speed);
 
 
 	question = {
 		'type': 'single',
 		'id': '0914',
-		'question': 'A train ' + dist1 + ' m long passes a pole in' + time1 + 'seconds. How long will take to pass a plateform '+dist2+'m long?',
+		'question': 'A train ' + dist1 + ' m long passes a pole in' + time1 + 'seconds. How long will take to pass a plateform '+ dist2 +'m long?',
 		'options': {
 			'A': time * parseInt(Math.random()*10),
 			'B': time - parseInt(Math.random()*10),
 			'C': time + parseInt(Math.random()*10),
-			'D': time 
+			'D': time
+		},
 		'answer': 'D',
 		'author-id': '09'
 	}
-	
-	return question;
-	
+	return question;	
 }
 function problem0915(){
 	var inputData = [{
@@ -808,9 +807,9 @@ function problem0917(){
 	speed = dist/time;
 	
 	question = {
-		'type': 'single'
+		'type': 'single',
 		'id': '0917',
-		'question': 'A person crosses a '+ distance+' m long street in '+ time+' minutes. What is speed in km per hour?', 
+		'question': 'A person crosses a ' + dist + ' m long street in '+ time+' minutes. What is speed in km per hour?', 
 		'options': {
 			'A': speed * parseInt(Math.random()*10),
 			'B': speed,
